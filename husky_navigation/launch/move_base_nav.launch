@@ -17,7 +17,7 @@
     <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
 
     <remap from="odom" to="/outdoor_waypoint_nav/odometry/filtered_map" />
-    <remap from="cmd_vel" to="/cmd_vel_intermediate" />
+    <remap from="cmd_vel" to="/cmd_vel_relay" />
     <remap from="/map" to="/outdoor_waypoint_nav/map" />
 
   </node>
