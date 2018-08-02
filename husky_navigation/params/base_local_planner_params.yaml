@@ -4,41 +4,30 @@ DWAPlannerROS:
 # on trajectory generation, so make sure they're
 # reasonable.
 
-  acc_lim_x: 1.0  # measured
-#  acc_limit_trans: 2.5 # undocumented
+  acc_lim_x: 3.0  # taken from husky_control/control.yaml
   acc_lim_y: 0.0
-  acc_lim_theta: 1.0
+  acc_lim_theta: 6.0 # taken from husky_control/control.yaml
 
 # Velocity limits.
-
-  # should both be the same on our robot
-  max_trans_vel: 0.6
-  max_vel_x: 0.6
-
-  # note: this can be negative if we want to allow
-  # going backward (and indeed we might)
-  min_vel_x: 0.015
-
-  # slowest speed the motors can achieve,
-  # forward or backward
-  min_trans_vel: 0.1  # measured
-
-  # no strafing
+  min_vel_x: 0.01 # measured
+  max_vel_x: 0.6  # taken from husky_control/control.yaml
+  min_vel_y: 0.0 # no strafing
   max_vel_y: 0.0
-  min_vel_y: 0.0
+  min_trans_vel: 0.01  # we can't strafe, so same as vel_x
+  max_trans_vel: 0.6
 
-#  max_rot_vel: 1.0
-  min_rot_vel: 0.25 # measured
+  min_rot_vel: 0.05 # measured
+  max_rot_vel: 0.5  # husky_control/control.yaml
 
 # Goal Tolerance Parameters
-  yaw_goal_tolerance: 0.5
+  yaw_goal_tolerance: 0.1
   xy_goal_tolerance: 0.5
   latch_xy_goal_tolerance: true
 
 # Forward Simulation Parameters
   sim_time: 3.0  # large effect on trajectory scoring!
 #  sim_granularity: 0.025
-#  vx_samples: 3
+  vx_samples: 8
   vy_samples: 0
 #  vtheta_samples: 20
 #  controller_frequency: 20
@@ -65,10 +54,10 @@ DWAPlannerROS:
   publish_cost_grid_pc: true  # DWA local planner cost grid
 
   # measured
-  trans_stopped_vel: 0.1
+#  trans_stopped_vel: 0.1
 
   # measured
-  rot_stopped_vel: 0.25
+#  rot_stopped_vel: 0.25
 
 TrajectoryPlannerROS:
   max_vel_x: 0.6
