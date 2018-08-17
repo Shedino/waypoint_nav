@@ -1,6 +1,6 @@
 navsat_transform:
   frequency: 30
-  delay: 3.0
+  delay: 10.0
   magnetic_declination_radians: 0.0
   yaw_offset: 0.0
   zero_altitude: true
