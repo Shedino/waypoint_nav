@@ -8,6 +8,7 @@ navsat_transform:
   publish_filtered_gps: true
   use_odometry_yaw: false
   wait_for_datum: true
-  datum: [32.6361176494, 99.5362245332, 0.0] # West Shackleford
+  datum: [31.9642121165, -96.5176923347, 0.0] # Navarro
+#  datum: [32.6361176494, 99.5362245332, 0.0] # West Shackleford
 #  datum: [31.9523351691, -97.8679529821, 0.0, map, base_link] # Kopperl
 
