@@ -1,3 +1,7 @@
+#
+# NOTE: this file is a placeholder/example. The 'real' file is an Ansible template,
+# and lives in the robot-deployment repository.
+#
 navsat_transform:
   frequency: 30
   delay: 10.0

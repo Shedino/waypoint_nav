@@ -1,5 +1,7 @@
-# For parameter descriptions, please refer to the template parameter files for each node.
-
+#
+# NOTE: this file is a placeholder/example. The 'real' file is an Ansible template,
+# and lives in the robot-deployment repository.
+#
 ekf_se_odom: # Used only for broadcasting odom to base_link transforms
   frequency: 30
   sensor_timeout: 0.1
