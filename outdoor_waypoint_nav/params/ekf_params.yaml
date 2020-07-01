@@ -1,7 +1,5 @@
-#
-# NOTE: this file is a placeholder/example. The 'real' file is an Ansible template,
-# and lives in the robot-deployment repository.
-#
+# For parameter descriptions, please refer to the template parameter files for each node.
+
 ekf_se_odom: # Used only for broadcasting odom to base_link transforms
   frequency: 30
   sensor_timeout: 0.1
@@ -57,7 +55,7 @@ ekf_se_odom: # Used only for broadcasting odom to base_link transforms
   imu0_differential: false
   imu0_relative: false
   imu0_queue_size: 10
-  imu0_remove_gravitational_acceleration: false
+  imu0_remove_gravitational_acceleration: true
 
   use_control: false
 
@@ -92,19 +90,6 @@ ekf_se_odom: # Used only for broadcasting odom to base_link transforms
                                 0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     1.0,  0,    0,
                                 0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    1.0,  0,
                                 0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    1.0]
-
-  # Navarro
-  initial_state: [0.0,  0.0,  0.0,
-                  0.0,  0.0,  -3.80,
-                  0.0,  0.0,  0.0,
-                  0.0,  0.0,  0.0,
-                  0.0,  0.0,  0.0]
-  # Kopperl
-#  initial_state: [0.0,  0.0,  0.0,
-#                  0.0,  0.0,  -1.860942776342,
-#                  0.0,  0.0,  0.0,
-#                  0.0,  0.0,  0.0,
-#                  0.0,  0.0,  0.0]
 
 ekf_se_map:
   frequency: 30
@@ -175,7 +160,7 @@ ekf_se_map:
   imu0_differential: false
   imu0_relative: false
   imu0_queue_size: 10
-  imu0_remove_gravitational_acceleration: false
+  imu0_remove_gravitational_acceleration: true
 
   use_control: false
 
@@ -211,15 +196,5 @@ ekf_se_map:
                                 0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    1.0,  0,
                                 0,    0,    0,    0,    0,    0,    0,    0,    0,    0,     0,     0,     0,    0,    1.0]
 
-  # Navarro
-  initial_state: [0.0,  0.0,  0.0,
-                  0.0,  0.0,  -3.80,
-                  0.0,  0.0,  0.0,
-                  0.0,  0.0,  0.0,
-                  0.0,  0.0,  0.0]
-  # Kopperl
-#  initial_state: [0.0,  0.0,  0.0,
-#                  0.0,  0.0,  -1.860942776342,
-#                  0.0,  0.0,  0.0,
-#                  0.0,  0.0,  0.0,
-#                  0.0,  0.0,  0.0]
+
+
